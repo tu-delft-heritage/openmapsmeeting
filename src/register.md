@@ -178,6 +178,9 @@ display(
 ```js
 import confetti from "npm:canvas-confetti";
 
+const shapes = await FileAttachment("data/shapes.json").json();
+const colors = ["#2873ab", "#ed1d33"];
+
 if (result === "clicked") {
   display(html`Loading...`);
 } else if (result === "incomplete") {
@@ -203,7 +206,14 @@ if (result === "clicked") {
     `
   );
 } else if (result === "success") {
-  confetti();
+  confetti({
+    disableForReducedMotion: true,
+    shapes,
+    scalar: 5,
+    ticks: 300,
+    spread: 120,
+    colors,
+  });
   display(
     html`
       <div label="Thank you" class="tip">
