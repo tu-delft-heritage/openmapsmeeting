@@ -31,8 +31,7 @@ export default {
   style: "custom-style.css",
   // theme: "glacier", // try "light", "dark", "slate", etc.
   // header: "", // what to show in the header (HTML)
-  footer:
-    'Design by <a href="https://luukvandeven.nl/">Luuk van de Ven</a>. Built with <a href="https://observablehq.com/framework/">Observable Framework</a>.', // what to show in the footer (HTML)
+  footer,
   // sidebar: true, // whether to show the sidebar
   // toc: true, // whether to show the table of contents
   pager: false, // whether to show previous & next links in the footer
@@ -42,6 +41,12 @@ export default {
   // typographer: false, // smart quotes and other typographic improvements
   // cleanUrls: true, // drop .html from URLs
 };
+
+function footer({ path }) {
+  return `Design by <a href="https://luukvandeven.nl/">Luuk van de Ven</a>. 
+  Built with <a href="https://observablehq.com/framework/">Observable Framework</a>. 
+  <a href="https://github.com/tu-delft-heritage/openmapsmeeting/blob/main/src${path}.md?plain=1">View source</a> on GitHub.`;
+}
 
 function head({ path, title }) {
   return `<meta property="og:title" content=${JSON.stringify(
