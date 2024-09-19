@@ -1,7 +1,15 @@
 // See https://observablehq.com/framework/config for documentation.
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
+import { join } from "node:path/posix";
+
+const SITE_NAME = "Open Maps Meeting";
+const HTTP_ROOT = "https://tu-delft-heritage.github.io/openmapsmeeting/";
+const SRC_ROOT = "src";
+
 export default {
   // The app’s title; used in the sidebar and webpage titles.
-  title: "Open Maps Meeting",
+  title: SITE_NAME,
 
   // The pages and sections in the sidebar. If you don’t specify this option,
   // all pages will be listed in alphabetical order. Listing pages explicitly
@@ -14,11 +22,7 @@ export default {
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:
-  head: ({ title }) =>
-    `<link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
-    <meta property="og:title" content="${title}" />
-    <meta property="og:description" content="Open Maps Meeting taking place at the Dutch National Archives and National Library on November 5 & 6 2024" />
-    <meta property="og:image" content="./_file/assets/hero.jpg" />`,
+  head,
 
   // The path to the source root.
   root: "src",
@@ -38,3 +42,32 @@ export default {
   // typographer: false, // smart quotes and other typographic improvements
   // cleanUrls: true, // drop .html from URLs
 };
+
+function head({ path, title }) {
+  return `<meta property="og:title" content=${JSON.stringify(
+    title ?? SITE_NAME
+  )}>
+  <meta property="og:description" content="Open Maps Meeting: November 5 & 6 2024 at the Dutch National Archives and National Library" />
+  ${og_image()}`;
+}
+
+// From:
+// https://github.com/observablehq/framework/discussions/1199#discussioncomment-10624165
+// https://github.com/fil/pangea/blob/main/observablehq.config.ts#L97
+
+function og_image() {
+  try {
+    // computes the same hash as framework 🌶
+    const contents = readFileSync(join(SRC_ROOT, `assets/hero.jpg`));
+    const key = createHash("sha256").update(contents).digest("hex").slice(0, 8);
+    const esc_img = JSON.stringify(
+      `${HTTP_ROOT}_file/assets/hero.jpg.${key}.jpg`
+    );
+    return `<link href="/assets/hero.jpg">
+<meta property="og:image" content=${esc_img} />
+<meta property="twitter:image" content=${esc_img} />
+`;
+  } catch (error) {
+    return "";
+  }
+}

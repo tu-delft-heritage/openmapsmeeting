@@ -3,6 +3,11 @@ title: Open Maps Meeting
 toc: false
 ---
 
+```js
+const background = await FileAttachment("assets/background.jpg").href;
+d3.select("body").style("background-image", "url(" + background + ")");
+```
+
 <img class="banner" src="assets/hero.svg">
 
 <div class="hero">
@@ -25,7 +30,6 @@ toc: false
 <style>
 
 body {
-  background-image: url("_file/assets/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
