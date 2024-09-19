@@ -142,8 +142,6 @@ const input = {
   submitted: Date.now(),
 };
 
-display(input);
-
 const complete = name && email && attendance ? true : false;
 
 const result = Mutable(null);
