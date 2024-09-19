@@ -45,7 +45,7 @@ export default {
 function footer({ path }) {
   return `Design by <a href="https://luukvandeven.nl/">Luuk van de Ven</a>. 
   Built with <a href="https://observablehq.com/framework/">Observable Framework</a>. 
-  <a href="https://github.com/tu-delft-heritage/openmapsmeeting/blob/main/src${path}.md?plain=1">View source</a> on GitHub.`;
+  View source on <a href="https://github.com/tu-delft-heritage/openmapsmeeting/blob/main/src${path}.md?plain=1">GitHub</a>.`;
 }
 
 function head({ path, title }) {
