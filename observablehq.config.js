@@ -60,9 +60,7 @@ function og_image() {
     // computes the same hash as framework 🌶
     const contents = readFileSync(join(SRC_ROOT, `assets/hero.jpg`));
     const key = createHash("sha256").update(contents).digest("hex").slice(0, 8);
-    const esc_img = JSON.stringify(
-      `${HTTP_ROOT}_file/assets/hero.jpg.${key}.jpg`
-    );
+    const esc_img = JSON.stringify(`${HTTP_ROOT}_file/assets/hero.${key}.jpg`);
     return `<link href="/assets/hero.jpg">
 <meta property="og:image" content=${esc_img} />
 <meta property="twitter:image" content=${esc_img} />
