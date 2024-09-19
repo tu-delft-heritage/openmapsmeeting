@@ -1,0 +1,38 @@
+@import url("observablehq:default.css");
+/* @import url("observablehq:theme-air.css"); */
+
+:root {
+    --sans-serif: Inter, -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+    --theme-background: #E0F7FA;
+    --theme-foreground: #101656;
+    --theme-background-alt: #E0F7FA;
+    --theme-foreground-alt: #101656;
+    --theme-foreground-muted: #101656;
+    --theme-foreground-focus: #C552B5;
+}
+
+body {
+    font: 16px/1.5 var(--sans-serif);
+}
+
+/* Default styles: */
+/* https: //github.com/observablehq/framework/blob/main/src/style/global.css */
+
+/* Purple: #C552B5 */
+/* Orange: #FF7415 */
+/* Yellow: #FFC742 */
+/* Green: #64C18F */
+/* Dark blue: #101656 */
+/* Light blue: #E0F7FA */
+/* Blue: #63D8E6 */
+/* Royal blue: #3B44AD */
+
+/* --theme-foreground: 
+--theme-background: 
+--theme-background-alt: 
+--theme-foreground-alt: 
+--theme-foreground-muted: 
+--theme-foreground-faint: 
+--theme-foreground-fainter: 
+--theme-foreground-faintest:  
+--theme-foreground-focus:  */
