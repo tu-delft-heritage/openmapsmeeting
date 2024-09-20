@@ -6,7 +6,7 @@ title: Registration
 
 Please use the form below to register for the Open Maps Meeting. Fields followed by an asterisk \* are required.
 
-<p class="orange">Registration will close on Friday October 11.</p>
+<p class="orange">Registration will close on Friday October 25.</p>
 
 ```js
 const name = view(
