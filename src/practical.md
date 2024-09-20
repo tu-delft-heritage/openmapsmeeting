@@ -60,79 +60,117 @@ The event is free and open to anyone interested. Lunch (for both days), dinner (
 import { WarpedMapLayer } from "npm:@allmaps/leaflet@1.0.0-beta.39";
 
 const maps = await FileAttachment("data/maps.json").json();
-const building = await FileAttachment("data/na-kb.geojson").json();
+// const building = await FileAttachment("data/na-kb.geojson").json();
+const mapMonster = await FileAttachment("assets/mapMonster.svg").text();
 
-const coord = [52.08108, 4.3262];
-
-// const div = display(document.createElement("div"));
-// div.style = "height: 400px;";
-
-const map = L.map("map");
-
-// .setView(coord, 14);
-
+// OpenStreetMapLayer
 // L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 //   attribution:
 //     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 // }).addTo(map);
 
-const buildingLayer = L.geoJson(building, {
-  style: {
-    color: "#FF56BA",
-    fillColor: "#FFBBE3",
-    fillOpacity: 1,
-  },
-  onEachFeature: (feature, layer) => {
-    const { id, name, address, website } = feature.properties;
-    layer.bindPopup(
-      ` <p>
-          <b>${name}</b><br>
-          ${address.join("<br>")}<br>
-          The Netherlands<br>
-          <a href="https://www.openstreetmap.org/${id}">OpenStreetMap</a><br>
-          <a href="${website}">Website</a>
-        </p>`
-    );
-  },
-}).addTo(map);
-// .bindPopup("National Archives.")
+// See which maps are available in Allmaps API:
+// `https://annotations.allmaps.org/maps?limit=25&intersects=${coord.join(",")}`
 
-map.fitBounds(buildingLayer.getBounds(), { maxZoom: 17 });
+const center = [52.08126724, 4.32712835];
 
-// L.marker(coord).addTo(map).bindPopup("National Archives.").openPopup();
+// const buildingLayer = L.geoJson(building, {
+//   style: {
+//     color: "#FF56BA",
+//     fillColor: "#FFBBE3",
+//     fillOpacity: 1,
+//   },
+//   onEachFeature: (feature, layer) => {
+//     const { id, name, address, website } = feature.properties;
+//     layer.bindPopup(
+//       `<p>
+//         <b>${name}</b><br>
+//         ${address.join("<br>")}<br>
+//         The Netherlands<br>
+//         <a href="https://www.openstreetmap.org/${id}">OpenStreetMap</a><br>
+//         <a href="${website}">Website</a>
+//       </p>`
+//     );
+//   },
+// });
 
-// const url = `https://annotations.allmaps.org/maps?limit=25&intersects=${coord.join(
-//   ","
-// )}`;
-// const resp = await fetch(url).then((resp) => resp.json());
-// display(resp);
+const mapMonsterIcon = L.divIcon({
+  html: mapMonster,
+  className: "icon",
+  iconSize: [100, 100],
+});
 
-const overlays = new Object();
+const mapMonsterMarker = L.marker(center, { icon: mapMonsterIcon }).bindPopup(
+  `<p>
+    <b>National Archives & National Library</b><br>
+    Prins Willem-Alexanderhof 5-20<br>
+    2595 BE Den Haag<br>
+    The Netherlands<br>
+  </p>`
+);
 
-const makeWarpedMapLayer = async (annotationUrl) => {
+const overlays = {};
+
+const makeWarpedMapLayer = async (item) => {
+  const attribution = `<a target="_blank" href="${item.url}">${item.collection}</a>`;
   const layer = new WarpedMapLayer(null, {
-    attribution: "test",
+    attribution,
   });
-  const ids = await layer.addGeoreferenceAnnotationByUrl(annotationUrl);
+  const ids = await layer.addGeoreferenceAnnotationByUrl(item.annotation);
   layer.setMapsTransformationType(ids, "thinPlateSpline");
   return layer;
 };
 
-for (const map of maps) {
-  overlays[map.title] = new WarpedMapLayer(map.annotation);
+const warpedMapLayers = await Promise.all(
+  maps.map((item) =>
+    makeWarpedMapLayer(item).then((warpedMapLayer) => ({
+      ...item,
+      warpedMapLayer,
+    }))
+  )
+);
+
+for (const layer of warpedMapLayers) {
+  const title = `<b>${layer.year}</b>`;
+  overlays[title] = layer.warpedMapLayer;
 }
 
+const layerControl = L.control.layers(overlays, null, { collapsed: false });
+
 const getRandomInt = (max) => Math.floor(Math.random() * max);
-
 const index = getRandomInt(maps.length - 1);
-const firstLayer = Object.entries(overlays)[index][1];
-firstLayer.addTo(map);
+const initialLayer = Object.entries(overlays)[index][1];
 
-const layerControl = L.control.layers(overlays, null).addTo(map);
+const map = L.map("map", {
+  center,
+  zoom: 15,
+});
+
+initialLayer.addTo(map);
+layerControl.addTo(map);
+mapMonsterMarker.addTo(map);
+
+// Force initial render...
+setTimeout(() => {
+  initialLayer._update();
+}, "1000");
 ```
 
 <style>
+  .card {
+    background: #64C18F;
+  }
   .leaflet-container {
     background: #64C18F;
+  }
+  .icon {
+    border: none;
+    background: none;
+  }
+  .control-link {
+    > svg {
+      height: 15px;
+      width: 15px;
+    }
   }
 </style>
