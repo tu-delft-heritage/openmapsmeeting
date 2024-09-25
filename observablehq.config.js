@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path/posix";
 
 const SITE_NAME = "Open Maps Meeting";
-const HTTP_ROOT = "https://tu-delft-heritage.github.io/openmapsmeeting/";
+const HTTP_ROOT = "https://openmapsmeeting.nl/";
 const SRC_ROOT = "src";
 
 export default {
@@ -16,6 +16,7 @@ export default {
   // lets you organize them into sections and have unlisted pages.
   pages: [
     { name: "Introduction", path: "/introduction" },
+    { name: "Guide", path: "/guide" },
     { name: "Practical information", path: "/practical" },
     { name: "Programme", path: "/programme" },
     { name: "Register", path: "/register" },
@@ -49,7 +50,8 @@ function footer({ path }) {
 }
 
 function head({ path, title }) {
-  return `<meta property="og:title" content=${JSON.stringify(
+  return `<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <meta property="og:title" content=${JSON.stringify(
     title ?? SITE_NAME
   )}>
   <meta property="og:description" content="Open Maps Meeting: November 5 & 6 2024 at the Dutch National Archives and National Library" />
