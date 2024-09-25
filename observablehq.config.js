@@ -16,7 +16,6 @@ export default {
   // lets you organize them into sections and have unlisted pages.
   pages: [
     { name: "Introduction", path: "/introduction" },
-    { name: "Guide", path: "/guide" },
     { name: "Practical information", path: "/practical" },
     { name: "Programme", path: "/programme" },
     { name: "Register", path: "/register" },
