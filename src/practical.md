@@ -61,8 +61,15 @@ The event is free and open to anyone interested. Lunch (for both days), dinner (
 import { WarpedMapLayer } from "npm:@allmaps/leaflet@1.0.0-beta.39";
 
 const maps = await FileAttachment("data/maps.json").json();
-// const building = await FileAttachment("data/na-kb.geojson").json();
 const mapMonster = await FileAttachment("assets/mapMonster.svg").text();
+// const building = await FileAttachment("data/na-kb.geojson").json();
+
+const center = [52.08126724, 4.32712835];
+
+const map = L.map("map", {
+  center,
+  zoom: 15,
+});
 
 // OpenStreetMapLayer
 // L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -72,8 +79,6 @@ const mapMonster = await FileAttachment("assets/mapMonster.svg").text();
 
 // See which maps are available in Allmaps API:
 // `https://annotations.allmaps.org/maps?limit=25&intersects=${coord.join(",")}`
-
-const center = [52.08126724, 4.32712835];
 
 // const buildingLayer = L.geoJson(building, {
 //   style: {
@@ -108,7 +113,7 @@ const mapMonsterMarker = L.marker(center, { icon: mapMonsterIcon }).bindPopup(
     2595 BE Den Haag<br>
     The Netherlands<br>
   </p>`
-);
+).addTo(map)
 
 const overlays = {};
 
@@ -117,7 +122,7 @@ const makeWarpedMapLayer = async (item) => {
   const layer = new WarpedMapLayer(null, {
     attribution,
   });
-  const ids = await layer.addGeoreferenceAnnotationByUrl(item.annotation);
+  const ids = await layer.addGeoreferenceAnnotation(item.annotationData);
   layer.setMapsTransformationType(ids, "thinPlateSpline");
   return layer;
 };
@@ -142,14 +147,8 @@ const getRandomInt = (max) => Math.floor(Math.random() * max);
 const index = getRandomInt(maps.length - 1);
 const initialLayer = Object.entries(overlays)[index][1];
 
-const map = L.map("map", {
-  center,
-  zoom: 15,
-});
-
 initialLayer.addTo(map);
 layerControl.addTo(map);
-mapMonsterMarker.addTo(map);
 
 // Force initial render...
 setTimeout(() => {
