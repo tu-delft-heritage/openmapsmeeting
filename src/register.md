@@ -52,9 +52,42 @@ const interests = view(
 _Please indicate below on which days you would like to attend the meeting. Day 1 (November 5) is dedicated to expert sessions, with a maximum of 30 participants. Day 2 (November 6) is for plenary outreach and has a maximum of 60 participants._
 
 ```js
+if (waitingList) {
+  display(html`<p class="orange">
+    All places have been booked.<br />
+    If you still sign up, you will be placed on the waiting list.
+  </p>`);
+}
+```
+
+```js
+const stats = await fetch("https://stats.openmapsmeeting.nl")
+  .then((resp) => {
+    if (resp.ok) {
+      return resp.json();
+    } else return null;
+  })
+  .catch(() => null);
+
+const waitingList = stats && stats.dayOne >= 30 && stats.dayTwo >= 60;
+
 const attendanceOptions = [
-  ["Day 1", "1"],
-  ["Day 2", "2"],
+  [
+    `Day 1 ${
+      stats
+        ? `(${stats.dayOne >= 30 ? "No" : 30 - stats.dayOne} places left)`
+        : ""
+    }`,
+    "1",
+  ],
+  [
+    `Day 2 ${
+      stats
+        ? `(${stats.dayTwo >= 60 ? "No" : 60 - stats.dayTwo} places left)`
+        : ""
+    }`,
+    "2",
+  ],
   ["Both days", "Both"],
 ];
 
@@ -140,6 +173,7 @@ const input = {
   share: share[0] || false,
   stayInformed: stayInformed[0] || false,
   submitted: Date.now(),
+  waitingList,
 };
 
 const complete = name && email && attendance ? true : false;
