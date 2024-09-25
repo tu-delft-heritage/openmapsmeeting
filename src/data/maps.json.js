@@ -38,6 +38,14 @@ const data = [
         "annotation": "https://annotations.allmaps.org/maps/59361d156b277dca@e109c04cd4d71d99",
         "collection": "Utrecht University Library",
         "url": "https://objects.library.uu.nl/reader/index.php?obj=1874-255740&lan=en"
+    },
+    {
+        "title": "Tramgids van 's-Gravenhage",
+        "year": "1926",
+        "manifest": "https://images.memorix.nl/hga/iiif/73216a2a-9a1b-c711-1c7b-67adfd106f78",
+        "annotation": "https://annotations.allmaps.org/images/47bacb78da90dff2",
+        "collection": "Haags Gemeentearchief",
+        "url": "https://haagsgemeentearchief.nl/mediabank/beeldcollectie/detail/e9cce592-7101-aa99-79e4-760ef6acabc5/media/73216a2a-9a1b-c711-1c7b-67adfd106f78"
     }
 ]
 
