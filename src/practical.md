@@ -37,15 +37,16 @@ Prins Willem-Alexanderhof 5<br>
 ## Organisers
 
 Jules Schoonman<br>
-Digital curator, Academic Heritage, History and Art, TU Delft Library
+_Digital curator, Academic Heritage, History and Art, TU Delft Library_
 
 Dr. Vincent Baptist<br>
-Assistant professor, History of Architecture and Urban Planning Group, Faculty of Architecture and the Built Environment, TU Delft
+_Assistant professor, History of Architecture and Urban Planning Group, Faculty of Architecture and the Built Environment, TU Delft_
 
 ## Partners
 
 National Library<br>
-National Archives
+National Archives<br>
+KNAW Humanities Cluster
 
 ## Costs
 

@@ -30,5 +30,13 @@
     "annotation": "https://annotations.allmaps.org/maps/6325db4998c7f13f@2100eb671cb9c4c0",
     "collection": "Nationaal Archief",
     "url": "https://www.nationaalarchief.nl/onderzoeken/archief/4.TOPO/invnr/10.439-440/file/NL-HaNA_4.TOPO_10.439-440_R"
+  },
+  {
+    "title": "Wandelkaart van 's-Gravenhage en omstreken",
+    "year": "1905",
+    "manifest": "https://objects.library.uu.nl/manifest/iiif/v2/1874-255740",
+    "annotation": "https://annotations.allmaps.org/maps/59361d156b277dca@e109c04cd4d71d99",
+    "collection": "Utrecht University Library",
+    "url": "https://objects.library.uu.nl/reader/index.php?obj=1874-255740&lan=en"
   }
 ]

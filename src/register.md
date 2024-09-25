@@ -189,7 +189,9 @@ if (result === "clicked") {
       <div label="Incomplete" class="warning">
         <p>
           The form is not complete and was not submitted. Please complete the
-          fields with an asterisk and click submit again.
+          fields with an asterisk and click submit again. In case of questions,
+          please contact
+          <a href="mailto:V.Baptist@tudelft.nl">Vincent Baptist</a>.
         </p>
       </div>
     `
@@ -199,8 +201,10 @@ if (result === "clicked") {
     html`
       <div label="Error" class="caution">
         <p>
-          Something went wrong while sending your registration. Please try again
-          by clicking the submit button above or send us an email instead.
+          Something went wrong while sending your registration. Please check
+          your internet connection and try again by clicking the submit button
+          above. In case of repeated errors, please contact
+          <a href="mailto:V.Baptist@tudelft.nl">Vincent Baptist</a>.
         </p>
       </div>
     `

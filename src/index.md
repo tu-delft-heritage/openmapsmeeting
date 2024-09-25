@@ -14,7 +14,7 @@ d3.select("body").style("background-image", "url(" + background + ")");
   <h2>The Open Maps Meeting brings together an international community of geospatial researchers, map curators, open-source developers and other professionals with a love for open data and historical maps</h2>
   <p>November 5 & 6 2024 at the Dutch National Archives and National Library<br>
   Organized by Jules Schoonman and Vincent Baptist (TU Delft)<br>
-  Funded by Open Science NL
+  Funded by Open Science NL. Supported by KNAW Humanities Cluster.
   </p>
   <a href="/introduction">Introduction<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>
   <a href="/programme">Programme<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>

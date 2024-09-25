@@ -4,7 +4,7 @@ title: Open Maps Meetings
 
 # Open Maps Meeting
 
-Open Science Meeting funded by Open Science NL
+_The Open Maps Meeting is an Open Science Meeting funded by Open Science NL._
 
 ## Introduction
 
