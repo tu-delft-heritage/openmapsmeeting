@@ -149,7 +149,7 @@ const result = Mutable(null);
 const submitForm = async (data) => {
   result.value = "clicked";
   if (complete) {
-    fetch("https://sammeltassen-openmapsmeeting.web.val.run", {
+    fetch("https://register.openmapsmeeting.nl", {
       method: "POST",
       body: JSON.stringify(data),
     })
