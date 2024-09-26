@@ -8,7 +8,7 @@ title: Practical information
 
 ## Dates
 
-November 5 & 6 2024
+November 5 & 6, 2024
 
 ## Location
 
@@ -17,29 +17,25 @@ November 5 & 6 2024
   </div>
 </div>
 
-National Archives & National Library, The Hague
+National Archives & National Library, The Hague<br>
 Both are housed in the same complex next to The Hague Central Station
 
 November 5:<br>
-Fruinzaal<br>
-National Archives<br>
+<a href="https://www.nationaalarchief.nl/over-het-na/contact/plan-je-bezoek-aan-het-nationaal-archief">National Archives</a>, Fruinzaal<br>
 Prins Willem-Alexanderhof 20<br>
-2595 BE Den Haag<br>
-[Website](https://www.nationaalarchief.nl/over-het-na/contact/plan-je-bezoek-aan-het-nationaal-archief)
+2595 BE The Hague<br>
 
 November 6:<br>
-Aula<br>
-National Library<br>
+<a href="https://www.kb.nl/en/visitors-members/address-and-opening-hours">National Library</a>, Aula<br>
 Prins Willem-Alexanderhof 5<br>
 2595 BE The Hague<br>
-[Website](https://www.kb.nl/en/visitors-members/address-and-opening-hours)
 
 ## Organisers
 
-Jules Schoonman<br>
+<a href="https://www.tudelft.nl/en/staff/j.a.schoonman/">Jules Schoonman</a><br>
 _Digital curator, Academic Heritage, History and Art, TU Delft Library_
 
-Dr. Vincent Baptist<br>
+<a href="https://www.tudelft.nl/en/staff/v.baptist/">Dr. Vincent Baptist</a><br>
 _Assistant professor, History of Architecture and Urban Planning Group, Faculty of Architecture and the Built Environment, TU Delft_
 
 ## Partners
@@ -54,8 +50,8 @@ The event is free and open to anyone interested. Lunch (for both days), dinner (
 
 ## Participants
 
-- Day 1: Maximum of 30 participants
-- Day 2: Maximum of 60 participants
+Day 1 has a maximum of 30 participants<br>
+Day 2 has a maximum of 60 participants
 
 ```js
 import { WarpedMapLayer } from "npm:@allmaps/leaflet@1.0.0-beta.39";

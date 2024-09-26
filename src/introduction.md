@@ -22,9 +22,13 @@ _Day 1: Expert sessions_
 
 The first day of the Open Maps Meeting builds common ground between expert participants by introducing and discussing a series of ongoing projects developed with mapping tools, presented by researchers from different institutions. Specific challenges are further addressed in parallel working sessions, reflecting the different phases of a collaborative workflow. At the end of the day, results are pitched by community members chairing the different sessions.
 
+[View the programme for day one](/programme#day-1-expert-sessions-5-november-2024)
+
 _Day 2: Plenary outreach_
 
 Like the first day of the Open Maps Meeting, the second day is open to anyone interested, but particularly aimed at researchers, archivists, curators, data stewards and open science advocates who are relatively new to the cartographic tools and workflows discussed during the first day and would like to learn more about their possibilities.
+
+[View the programme for day two](/programme#day-2-plenary-outreach-6-november-2024)
 
 ## Background
 
@@ -34,4 +38,4 @@ Often developed by international consortia of cultural heritage institutions, di
 
 Moving towards an active Open Science community that, across different research endeavours, archival collections and institutional affiliations, embraces a shared workflow supported by an ecosystem of well-integrated tools therefore requires the construction of collaborative alignment among researchers, institutions as data providers, and developers, while further increasing the interoperability of existing tools according to community needs.
 
-Central to the Open Maps Meeting is the open-source project Allmaps, co-founded by TU Delft Library, consisting of tools to work with digitised cartographic resources. TU Delft Library has been actively seeking collaborations with researchers, data and heritage specialists to promote the adoption of Allmaps, and has repeatedly observed interest in connecting Allmaps to related open source tools, such as MapReader, a computer vision pipeline for annotating map features developed at the Alan Turing Institute, and Madoc, a crowd-sourcing platform developed by the UK company Digirati with funding from the Belgian CLARIAH-VL network. The Open Maps Meeting would bring together all project representatives and their respective users for the first time.
+Central to the Open Maps Meeting is the open-source project Allmaps, co-founded by TU Delft Library, consisting of tools to work with digitised cartographic resources. TU Delft Library has been actively seeking collaborations with researchers, data and heritage specialists to promote the adoption of Allmaps, and has repeatedly observed interest in connecting Allmaps to related open source tools, such as MapReader, a computer vision pipeline for annotating map features developed at the Alan Turing Institute, and [Madoc](https://madoc.digirati.com/), a crowd-sourcing platform developed by the UK company Digirati with funding from the Belgian CLARIAH-VL network. The Open Maps Meeting would bring together all project representatives and their respective users for the first time.
