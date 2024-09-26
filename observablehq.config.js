@@ -69,12 +69,11 @@ function og_image() {
     const esc_img = JSON.stringify(
       `${HTTP_ROOT}_file/assets/opengraph.${key}.jpg`
     );
-    return `<link href="/assets/opengraph.jpg">
-<meta name="image" property="og:image" content=${esc_img} />
-<meta property="twitter:image" content=${esc_img} />
-<meta property="og:image:width" content="1120">
-<meta property="og:image:height" content="630">
-`;
+    return `<meta name="image" property="og:image" content=${esc_img} />
+            <meta property="twitter:image" content=${esc_img} />
+            <meta property="og:image:width" content="1120">
+            <meta property="og:image:height" content="630">
+            <link href="/assets/opengraph.jpg">`;
   } catch (error) {
     return "";
   }
