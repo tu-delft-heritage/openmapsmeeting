@@ -51,10 +51,8 @@ function footer({ path }) {
 
 function head({ path, title }) {
   return `<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
-  <meta property="og:title" content=${JSON.stringify(
-    title ?? SITE_NAME
-  )}>
-  <meta property="og:description" content="Open Maps Meeting: November 5 & 6 2024 at the Dutch National Archives and National Library" />
+  <meta property="og:title" content=${JSON.stringify(title ?? SITE_NAME)}>
+  <meta name="description" property="og:description" content="Open Maps Meeting: November 5 & 6 2024 at the Dutch National Archives and National Library" />
   <meta property="og:type" content="website">
   ${og_image()}`;
 }
@@ -72,7 +70,7 @@ function og_image() {
       `${HTTP_ROOT}_file/assets/opengraph.${key}.jpg`
     );
     return `<link href="/assets/opengraph.jpg">
-<meta property="og:image" content=${esc_img} />
+<meta name="image" property="og:image" content=${esc_img} />
 <meta property="twitter:image" content=${esc_img} />
 <meta property="og:image:width" content="1120">
 <meta property="og:image:height" content="630">
