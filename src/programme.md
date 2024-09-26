@@ -52,5 +52,5 @@ _Like the first day of the Open Maps Meeting, the second day is open to anyone i
   - Wouter Bracke, Royal Library of Belgium
   - Johan Van der Eycken, Belgian National Archives
 - 15u30 - Coffee break
-- 16u - Keynote lecture (to be confirmed)
+- 16u - Keynote lecture
 - 17u - Drinks
