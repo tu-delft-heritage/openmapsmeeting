@@ -71,8 +71,8 @@ function og_image() {
     );
     return `<meta name="image" property="og:image" content=${esc_img} />
             <meta property="twitter:image" content=${esc_img} />
-            <meta property="og:image:width" content="1120">
-            <meta property="og:image:height" content="630">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="675">
             <link href="/assets/opengraph.jpg">`;
   } catch (error) {
     return "";
