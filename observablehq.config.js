@@ -19,6 +19,7 @@ export default {
     { name: "Practical information", path: "/practical" },
     { name: "Programme", path: "/programme" },
     { name: "Register", path: "/register" },
+    { name: "Contact", path: "/contact" },
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:

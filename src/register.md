@@ -266,6 +266,8 @@ if (result === "clicked") {
 }
 ```
 
+_The information provided is used exclusively for the organization and execution of the Open Maps Meeting. We do not share or sell your information to third parties, and ensure that it is stored securely. After the event, the information is not stored longer than strictly necessary. Please [get in touch](/contact) in case of questions._
+
 <style>
   .orange {
     color: #FF7415
