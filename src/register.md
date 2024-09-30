@@ -52,11 +52,23 @@ const interests = view(
 _Please indicate below on which days you would like to attend the meeting. Day 1 (November 5) is dedicated to expert sessions, with a maximum of 30 participants. Day 2 (November 6) is for plenary outreach and has a maximum of 60 participants._
 
 ```js
-if (waitingList) {
-  display(html`<p class="orange">
-    All places have been booked.<br />
-    If you still sign up, you will be placed on the waiting list.
-  </p>`);
+if (stats) {
+  if (stats.dayOne >= 30 && stats.dayTwo >= 60) {
+    display(html`<p class="orange">
+      Both days have been booked.<br />
+      You can still sign up to be added to the waiting list.
+    </p>`);
+  } else if (stats.dayTwo >= 60) {
+    display(html`<p class="orange">
+      Day 2 has been fully booked.<br />
+      You can still sign up to be added to the waiting list.
+    </p>`);
+  } else if (stats.dayOne >= 30) {
+    display(html`<p class="orange">
+      Day 1 has been fully booked.<br />
+      You can still sign up to be added to the waiting list.
+    </p>`);
+  }
 }
 ```
 
