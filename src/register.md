@@ -55,8 +55,9 @@ _Please indicate below on which days you would like to attend the meeting. Day 1
 if (stats) {
   if (stats.dayOne >= 30 && stats.dayTwo >= 60) {
     display(html`<p class="orange">
-      Both days have been fully booked.<br />
-      You can still sign up to be added to the waiting list.
+      Both days have been fully booked. We are currently trying to increase the
+      capacity for day 2 to accommodate more participants. You can still sign up
+      to be added to the waiting list.
     </p>`);
   } else if (stats.dayTwo >= 60) {
     display(html`<p class="orange">
