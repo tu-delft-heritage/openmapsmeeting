@@ -35,7 +35,7 @@ Max. attendees: ~~60~~ 120
 _Like the first day of the Open Maps Meeting, the second day is open to anyone interested, but particularly aimed at researchers, archivists, curators, data stewards and open science advocates who are relatively new to the cartographic tools and workflows discussed during the first day and would like to learn more about their possibilities._
 
 - 9u30 - Walk-in with coffee
-- 10u00 - Welcome by Dick van Gameren (Faculty of Architecture and the Built Environment, TU Delft) and Irene Haslinger (TU Delft Library), and introduction by Vincent Baptist
+- 10u00 - Welcome by Wilma van Wezenbeek (director general, National Library) and Dick van Gameren (dean, Faculty of Architecture and the Built Environment, TU Delft), and introduction by Vincent Baptist
 - 10u30 - Tools presentation round:
   - [IIIF](https://iiif.io/): Open protocols for working with digitised heritage collections (Caitlin Perry, IIIF Consortium)
   - [Allmaps](https://allmaps.org/): Exploring, georeferencing and curating IIIF Maps (Bert Spaan & Manuel Claeys Bouuaert)
