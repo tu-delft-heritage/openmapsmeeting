@@ -51,7 +51,7 @@ The event is free and open to anyone interested. Lunch (for both days), dinner (
 ## Participants
 
 Day 1 has a maximum of 30 participants<br>
-Day 2 has a maximum of 60 participants
+Day 2 has a maximum of ~~60~~ 120 participants
 
 ```js
 import { WarpedMapLayer } from "npm:@allmaps/leaflet@1.0.0-beta.39";
@@ -102,14 +102,16 @@ const mapMonsterIcon = L.divIcon({
   iconSize: [100, 100],
 });
 
-const mapMonsterMarker = L.marker(center, { icon: mapMonsterIcon }).bindPopup(
-  `<p>
+const mapMonsterMarker = L.marker(center, { icon: mapMonsterIcon })
+  .bindPopup(
+    `<p>
     <b>National Archives & National Library</b><br>
     Prins Willem-Alexanderhof 5-20<br>
     2595 BE Den Haag<br>
     The Netherlands<br>
   </p>`
-).addTo(map)
+  )
+  .addTo(map);
 
 const overlays = {};
 

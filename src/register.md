@@ -49,22 +49,21 @@ const interests = view(
 );
 ```
 
-_Please indicate below on which days you would like to attend the meeting. Day 1 (November 5) is dedicated to expert sessions, with a maximum of 30 participants. Day 2 (November 6) is for plenary outreach and has a maximum of 60 participants._
+_Please indicate below on which days you would like to attend the meeting. Day 1 (November 5) is dedicated to expert sessions, with a maximum of ${dayOneMax} participants. Day 2 (November 6) is for plenary outreach and has a maximum of ${dayTwoMax} participants._
 
 ```js
 if (stats) {
-  if (stats.dayOne >= 30 && stats.dayTwo >= 60) {
+  if (stats.dayOne >= dayOneMax && stats.dayTwo >= dayTwoMax) {
     display(html`<p class="orange">
-      Both days have been fully booked. We are currently trying to increase the
-      capacity for day 2 to accommodate more participants. You can still sign up
-      to be added to the waiting list.
+      Both days have been fully booked.<br />
+      You can still sign up to be added to the waiting list.
     </p>`);
-  } else if (stats.dayTwo >= 60) {
+  } else if (stats.dayTwo >= dayTwoMax) {
     display(html`<p class="orange">
       Day 2 has been fully booked.<br />
       You can still sign up to be added to the waiting list.
     </p>`);
-  } else if (stats.dayOne >= 30) {
+  } else if (stats.dayOne >= dayOneMax) {
     display(html`<p class="orange">
       Day 1 has been fully booked.<br />
       You can still sign up to be added to the waiting list.
@@ -74,6 +73,9 @@ if (stats) {
 ```
 
 ```js
+const dayOneMax = 30;
+const dayTwoMax = 120;
+
 const stats = await fetch("https://stats.openmapsmeeting.nl")
   .then((resp) => {
     if (resp.ok) {
@@ -82,13 +84,16 @@ const stats = await fetch("https://stats.openmapsmeeting.nl")
   })
   .catch(() => null);
 
-const waitingList = stats && stats.dayOne >= 30 && stats.dayTwo >= 60;
+const waitingList =
+  stats && stats.dayOne >= dayOneMax && stats.dayTwo >= dayTwoMax;
 
 const attendanceOptions = [
   [
     `Day 1 ${
       stats
-        ? `(${stats.dayOne >= 30 ? "No" : 30 - stats.dayOne} places left)`
+        ? `(${
+            stats.dayOne >= dayOneMax ? "No" : dayOneMax - stats.dayOne
+          } places left)`
         : ""
     }`,
     "1",
@@ -96,7 +101,9 @@ const attendanceOptions = [
   [
     `Day 2 ${
       stats
-        ? `(${stats.dayTwo >= 60 ? "No" : 60 - stats.dayTwo} places left)`
+        ? `(${
+            stats.dayTwo >= dayTwoMax ? "No" : dayTwoMax - stats.dayTwo
+          } places left)`
         : ""
     }`,
     "2",

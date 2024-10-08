@@ -30,7 +30,7 @@ _The first day of the Open Maps Meeting builds common ground between expert part
 ## Day 2: Plenary outreach (6 November 2024)
 
 Location: Aula, National Library, The Hague.<br>
-Max. attendees: 60
+Max. attendees: ~~60~~ 120
 
 _Like the first day of the Open Maps Meeting, the second day is open to anyone interested, but particularly aimed at researchers, archivists, curators, data stewards and open science advocates who are relatively new to the cartographic tools and workflows discussed during the first day and would like to learn more about their possibilities._
 
