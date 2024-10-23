@@ -18,7 +18,7 @@ _The first day of the Open Maps Meeting builds common ground between expert part
 - 10u30 - Projects presentation round:
   - [HisGIS](https://hisgis.nl/): Renewing the infrastructure for georeferencing, enriching and presenting cadastral maps (Thomas Vermaut & Mariëlle Veldhuis, KNAW Humanities Cluster)
   - Semi-automatically geo-referencing rectangular sheets in historic IIIF map series: Experiences and future wishes (Martijn Meijers, Delft University of Technology)
-  - [MapReader](https://github.com/maps-as-data/MapReader): Computer vision pipeline for exploring maps at scale (Katherine McDonough, Rosie Wood & Kalle Westerling, Alan Turing Institute & Lancaster University)
+  - Map Content & Historical Research: Applications in Nineteenth-Century British History (Katherine McDonough, Rosie Wood & Kalle Westerling, Alan Turing Institute & Lancaster University)
   - [Globalise](https://globalise.huygens.knaw.nl/): Unlocking the archive of the Dutch East India Company (Leon van Wissen, University of Amsterdam/Huygens Institute)
   - [Artemis](https://www.ghentcdh.ugent.be/projects/artemis-advanced-research-tools-environmental-studies-historical-maps-scheldt-valley): Mapping the Scheldt valley (Christophe Verbruggen, Ghent University/CLARIAH-VL & Iason Jongepier, Antwerp University/National Archives of Belgium)
 - 12u30 - Collective input session on project workflows and barriers to organise topics for afternoon sessions
