@@ -104,13 +104,15 @@ if (stats) {
 const dayOneMax = 30;
 const dayTwoMax = 120;
 
-const stats = await fetch("https://stats.openmapsmeeting.nl")
-  .then((resp) => {
-    if (resp.ok) {
-      return resp.json();
-    } else return null;
-  })
-  .catch(() => null);
+const stats = !disabled
+  ? await fetch("https://stats.openmapsmeeting.nl")
+      .then((resp) => {
+        if (resp.ok) {
+          return resp.json();
+        } else return null;
+      })
+      .catch(() => null)
+  : null;
 
 const waitingList =
   stats && stats.dayOne >= dayOneMax && stats.dayTwo >= dayTwoMax;
