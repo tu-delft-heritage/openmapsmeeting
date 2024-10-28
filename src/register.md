@@ -6,21 +6,48 @@ title: Registration
 
 Please use the form below to register for the Open Maps Meeting. Fields followed by an asterisk \* are required.
 
-<p class="orange">Registration will close on Friday October 25.</p>
+```js
+if (disabled) {
+  display(html`<div label="Registration closed" class="caution">
+    Registration has closed on ${closingDate.toDateString()}. Please use the
+    <a href="/contact">contact form</a> to get in touch.
+  </div>`);
+} else {
+  display(
+    html`<p class="orange">
+      Registration will close on ${closingDate.toDateString()}.
+    </p>`
+  );
+}
+```
+
+```js
+const closingDate = new Date("2024-10-26");
+const disabled = Date.now() > closingDate.getTime() ? true : false;
+```
 
 ```js
 const name = view(
-  Inputs.text({ label: "Name *", placeholder: "Please enter your name" })
+  Inputs.text({
+    label: "Name *",
+    placeholder: "Please enter your name",
+    disabled,
+  })
 );
 
 const email = view(
-  Inputs.email({ label: "Email *", placeholder: "Please enter your email" })
+  Inputs.email({
+    label: "Email *",
+    placeholder: "Please enter your email",
+    disabled,
+  })
 );
 
 const affiliation = view(
   Inputs.text({
     label: "Affiliation",
     placeholder: "Please enter your affiliation",
+    disabled,
   })
 );
 
@@ -37,7 +64,7 @@ _We would like to learn more about your background, but this is optional for reg
 
 ```js
 const background = view(
-  Inputs.checkbox(pespectiveOptions, { label: "Background" })
+  Inputs.checkbox(pespectiveOptions, { label: "Background", disabled })
 );
 
 const interests = view(
@@ -45,6 +72,7 @@ const interests = view(
     label: "Interests",
     placeholder:
       "Please enter more information about your interests if you like",
+    disabled,
   })
 );
 ```
@@ -112,19 +140,20 @@ const attendanceOptions = [
 ];
 
 const attendance = view(
-  Inputs.radio(new Map(attendanceOptions), { label: "Attendance *" })
+  Inputs.radio(new Map(attendanceOptions), { label: "Attendance *", disabled })
 );
 ```
 
 ```js
-const disabled = !attendance || attendance === "2" ? true : false;
+const attendanceDisabled =
+  disabled || !attendance || attendance === "2" ? true : false;
 
 const suggestions = view(
   Inputs.textarea({
     label: "Ideas",
     placeholder:
       "Please enter your ideas for the afternoon working session on day 1",
-    disabled,
+    disabled: attendanceDisabled,
   })
 );
 
@@ -132,7 +161,7 @@ const dinner = view(
   Inputs.checkbox(["Yes"], {
     label: "I would like to join for dinner on day 1",
     valueof: () => true,
-    disabled,
+    disabled: attendanceDisabled,
   })
 );
 ```
@@ -154,6 +183,7 @@ const comments = view(
   Inputs.textarea({
     label: "Other comments",
     placeholder: "Please enter your comments here",
+    disabled,
   })
 );
 ```
@@ -166,6 +196,7 @@ const share = view(
     label:
       "My name, email, affiliation, background and interests can be shared with other participants",
     valueof: () => true,
+    disabled,
   })
 );
 
@@ -174,6 +205,16 @@ const stayInformed = view(
     label:
       "I would like to be kept informed about the meeting's outcomes and receive more information about the projects presented",
     valueof: () => true,
+    disabled,
+  })
+);
+```
+
+```js
+display(
+  Inputs.button("Submit", {
+    reduce: () => submitForm(input),
+    disabled: disabled || result === "clicked" ? true : false,
   })
 );
 ```
@@ -221,12 +262,6 @@ const submitForm = async (data) => {
     result.value = "incomplete";
   }
 };
-
-display(
-  Inputs.button("Submit", {
-    reduce: () => submitForm(input),
-  })
-);
 ```
 
 ```js
