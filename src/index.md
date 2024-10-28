@@ -17,7 +17,6 @@ d3.select("body").style("background-image", "url(" + background + ")");
   Funded by Open Science NL, KNAW Humanities Cluster,<br>
   Stichting Pica and TU Delft.
   </p>
-  <p class="orange">More places have become available for day 2!</p>
   <a href="/introduction">Introduction<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>
   <a href="/programme">Programme<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>
   <a href="/practical">Practical information<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>
