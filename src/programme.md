@@ -39,8 +39,8 @@ _Like the first day of the Open Maps Meeting, the second day is open to anyone i
 - 10u30 - Tools presentation round:
   - [IIIF](https://iiif.io/): Open protocols for working with digitised heritage collections (Caitlin Perry, IIIF Consortium)
   - [Allmaps](https://allmaps.org/): Exploring, georeferencing and curating IIIF Maps (Bert Spaan & Manuel Claeys Bouuaert)
-  - [MapReader](https://github.com/maps-as-data/MapReader): Computer vision pipeline for exploring maps at scale (Katherine McDonough, Rosie Wood & Kalle Westerling, Alan Turing Institute & Lancaster University)
-  - [Madoc](https://madoc.digirati.com/) and other IIIF-supporting tools for research and crowdsourcing projects (Paul Mollahan, Digirati)
+  - [MapReader](https://github.com/maps-as-data/MapReader): Open, Reproducible Image Classification & Text Spotting (Katherine McDonough, Alan Turing Institute & Lancaster University)
+  - [Madoc](https://madoc.digirati.com/) and other IIIF-supporting tools for research and crowdsourcing projects (Paul Mollahan & Stephen Fraser, Digirati)
   - [4TU.ResearchData repository](https://data.4tu.nl/): Launch of IIIF support (Roel Janssen, 4TU.ResearchData)
   - Q&A
 - 12u30 - Lunch and Allmaps Arcade
