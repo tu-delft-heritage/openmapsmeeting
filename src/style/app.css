@@ -15,6 +15,10 @@ body {
     font: 17px/1.5 var(--sans-serif);
 }
 
+strong {
+    font-weight: 600;
+}
+
 /* Default styles: */
 /* https: //github.com/observablehq/framework/blob/main/src/style/global.css */
 

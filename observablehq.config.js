@@ -18,6 +18,7 @@ export default {
     { name: "Introduction", path: "/introduction" },
     { name: "Practical information", path: "/practical" },
     { name: "Programme", path: "/programme" },
+    { name: "Working paper", path: "publications/2025/open-maps"},
     { name: "Register", path: "/register" },
     { name: "Contact", path: "/contact" },
   ],
@@ -29,7 +30,7 @@ export default {
   root: "src",
 
   // Some additional configuration options and their defaults:
-  style: "custom-style.css",
+  style: "style/app.css",
   // theme: "glacier", // try "light", "dark", "slate", etc.
   // header: "", // what to show in the header (HTML)
   footer,
