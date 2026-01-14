@@ -90,13 +90,17 @@ _Figure 3: Example of MapReader patches classified as urban "railspace" and buil
 
 The Cartonomics research initiative at EPFL automatically extracts, classifies and correlates visual and textual features from large-scale historical map collections, by means of the latest AI techniques, such as neural network and transformer-based architectures. Cartonomics’ models are trained on datasets of more than 250.000 annotated map segments and 285.000 extracted text sequences from 19th-century European maps and major European cadastral series (cf. Lin et al. 2026), to reconstruct complex entities such as multi-word place names or composite cartographic symbols. These computational approaches transform maps into analyzable data layers, revealing and enabling the comparison of graphic conventions, symbolic grammars and spatial hierarchies across time and regions (Petitpierre et al. 2024). In this way, this work provides an empirical basis for a renewed understanding of cartographic languages, their diffusion, adaptation and transformation, through automated, multimodal analysis that goes well beyond traditional case-based map studies. Cartonomics’ technical pipeline can recognize and vectorize multiple layers of cartographic information that together describe both the graphic composition and the semantic content of historical maps.
 
-<!-- *Figure 4: Examples of Cartonomics’ most frequent and characteristic cartographic signs extracted and compared across different time strata.* -->
+<div><img width="100%" src="/assets/paper/cartonomics-extracted-signs.jpg"></div>
+
+_Figure 4: Examples of Cartonomics’ most frequent and characteristic cartographic signs extracted and compared across different time strata._
 
 The Cartonomics pipeline performs semantic segmentation of base categories such as built, non-built and water-related areas, roads and administrative boundaries. Beyond these thematic layers, it also extracts typographic elements, such as map labels and toponyms, to reconstruct multi-word entities and align them with their corresponding geometries on the original maps. The pipeline also permits to detect graphical signs and pictorial symbols, such as hachures, contour lines and boundary markers, enabling the reconstruction of the symbolic grammar of particular cartographic traditions. 
 
 Through vectorization and spatial realignment, extracted elements can be further compared across map series and time periods, allowing the study of the evolution of visual mapping conventions. This makes it possible to trace the diffusion of cartographic languages: how particular symbolic systems, line codings and typographic norms circulated among mapmakers and institutions. From a historiographic perspective, such analyses reveal how cartographic practices encode assumptions on what was known about geographical territory, visibility and hierarchy in certain periods, and how engineers, surveyors and map publishers collectively constructed spatial knowledge.
 
-<!-- *Figure 5: Examples of word detection and linking, highlighted with colored polygons, from Ludovico Ughi’s 1729 map of Venice.* -->
+<div><img width="100%" src="/assets/paper/cartonomics-word-detection.jpg"></div>
+
+_Figure 5: Examples of word detection and linking, highlighted with colored polygons, from Ludovico Ughi’s 1729 map of Venice._
 
 The ways in which AI, computer vision and machine learning principles help expand analytical processes across large cartographic source collections can unlock the true research potential of this material. At the same time, this also comes with new epistemological trade-offs for researchers: new types of uncertainty are introduced, which can make historians feel rather uneasy about working with the produced data. How precise do large-scale classifications of map fragments for instance need to be, to base sound research results on? How much analytical certainty is required, from a humanities-based research perspective?
 
@@ -106,17 +110,13 @@ Increased digital availability and analysis of historical maps also introduces n
 
 The GLOBALISE project aims to innovate research practices involving the archives of the Dutch East India Company (VOC), a dominant colonial power in the 17th and 18th centuries. The project’s primary goal is to create a new infrastructure that allows researchers to read, browse and query the millions of pages of written sources created by the VOC. These archives, housed in the Dutch National Archives, are crucial for new understandings of the histories of colonial expansion and local societies in maritime Asia and the Cape of Good Hope. However, all these written archival sources were originally intended to be used alongside visual materials, such as maps. Maps remain vital for understanding information about the places referenced in textual records, while these written sources, in turn, provide essential context that enriches cartographic knowledge (Van Wissen, Kuruppath & Petram 2025).   The Necessary Reunions project aims to reinstate this synergy between texts and maps into the VOC archives, focusing on a corpus of 30 maps of early modern Kerala, India. This project aims to integrate data from textual archives and maps to create two key outputs: a gazetteer and a website. The gazetteer will function as a structured digital directory of place information, including location data and historical toponyms. The website will allow users to visualize these data enrichments directly on the VOC maps.  To achieve this, the project employs several techniques, such as text spotting (using the MapReader pipeline) and handwritten text recognition to transcribe toponyms on maps into machine-readable text, and georeferencing (via Allmaps) to identify and assign modern coordinates to historical locations by comparing them with contemporary maps. Subsequently, identified places are linked to unique and persistent entries within the gazetteer. The resulting gazetteer and accompanying website will allow historians to better contextualize places and comprehend historical interactions. This provides vital context to better interpret the broader VOC archives, while enabling a reconceptualization of Kerala's early modern topography and supporting new histories of the region. 
 
-<div class="grid grid-cols-2">
-  <div class="card"><img width="100%" src="/assets/paper/globalise-georeferencing.jpg"></div>
-  <div class="card"><img width="100%" src="/assets/paper/globalise-iconography.jpg"></div>
-</div>
+<div><img width="100%" src="/assets/paper/globalise-annotated-map.jpg"></div>
 
-_Figure 4: Impression of georeferenced map and detected cartographic iconography from GLOBALISE project_
+_Figure 6: Annotated map of the South Coast of India (ca. 1752-1757), showing annotated and transcribed toponyms, annotated icons and reference points (from Dutch National Archives, [NL-HaNA\_4.MIKO\_W37](https://www.nationaalarchief.nl/en/research/archive/4.MIKO/invnr/W37/file/NL-HaNA_4.MIKO_W37))._
 
-<!-- *Figure 6: Annotated map of the South Coast of India (ca. 1752-1757), showing annotated and transcribed toponyms, annotated icons and reference points (original source from Dutch National Archives, [NL-HaNA\_4.MIKO\_W37](https://www.nationaalarchief.nl/en/research/archive/4.MIKO/invnr/W37/file/NL-HaNA_4.MIKO_W37)).*
+<div><img width="100%" src="/assets/paper/globalise-georeferenced-map.jpg"></div>
 
-![][image8]  
-*Figure 7: Georeferenced map of the South Coast of India (ca. 1752-1757), showing a transformed early modern map with ten control points, annotated using Allmaps (original source from Dutch National Archives, [NL-HaNA\_4.MIKO\_W37](https://www.nationaalarchief.nl/en/research/archive/4.MIKO/invnr/W37/file/NL-HaNA_4.MIKO_W37)).* -->
+_Figure 7: Georeferenced map of the South Coast of India (ca. 1752-1757), showing a transformed early modern map with ten control points, annotated using Allmaps (from Dutch National Archives, [NL-HaNA\_4.MIKO\_W37](https://www.nationaalarchief.nl/en/research/archive/4.MIKO/invnr/W37/file/NL-HaNA_4.MIKO_W37))._
 
 ## Project Highlight II \- [Artemis](https://www.ghentcdh.ugent.be/projects/artemis-advanced-research-tools-environmental-studies-historical-maps-scheldt-valley)
 
@@ -126,11 +126,9 @@ Run jointly by Ghent University and the University of Antwerp, and linked to the
 
 The project draws on key historical map series, including the Ferraris map, the primitive cadastre and the reduced cadastre (provided by the Royal Library of Belgium, the State Archives, the National Geographic Institute and Meise Botanical Garden), but also on unique handwritten older maps (as kept at the State Archives of Belgium and various city archives). Large-scale georeferencing is carried out via Allmaps and during public mapathons, while text extraction from the maps is performed using MapReader, with a fine-tuned text spotting model. For the historical cadastre, the project develops and tests feature extraction and parcel vectorization methods to identify and vectorize cadastral parcels on the primitive cadastral maps. The resulting datasets are being published as Linked Open Data, ensuring that other researchers and policymakers can reuse them to continue studying the Scheldt region’s environmental history and inform future land and water management.
 
-<div><img width="100%" src="/assets/paper/artemis.jpg"></div>
+<div><img width="100%" src="/assets/paper/artemis-parcels.jpg"></div>
 
-_Figure 5: Overview of Artemis’ project infrastructure pipelines_
-
-<!-- *Figure 8: Example of parcel numbers detected on the primitive cadastral maps from the Artemis project.* -->
+_Figure 8: Example of parcel numbers detected on the primitive cadastral maps from the Artemis project._
 
 ## Project Highlight III \- [SoDUCo](https://soduco.geohistoricaldata.org/)
 
