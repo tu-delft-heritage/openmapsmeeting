@@ -19,8 +19,7 @@ d3.select("body").style("background-image", "url(" + background + ")");
   </p>
   <a href="/introduction">Introduction<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>
   <a href="/programme">Programme<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>
-  <a href="/practical">Practical information<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>
-  <a href="/register">Register<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>
+  <a href="/publications/2025/open-maps">Working paper<span style="display: inline-block; margin-left: 0.25rem;">↗︎</span></a>
 </div>
 
 <div class="grid grid-cols-3">
