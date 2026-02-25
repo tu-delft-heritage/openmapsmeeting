@@ -32,6 +32,8 @@ _This working paper is an outcome of the first international Open Maps Meeting, 
 Baptist, V., J. Schoonman, T. Vermaut, R. Stapel, M. Veldhuis, M. Meijers, K. McDonough, R. Wood, K. Westerling, L. van Wissen, M. Kuruppath, C. Verbruggen, I. Jongepier, V. Ducatteeuw, I. Di Lenardo, R. Petitpierre and J. Perret. “Open Maps: New Research Directions and Workflows for Digitized Historical Cartographic Material.” Open Maps Meeting, The Hague, The Netherlands, November 5-6, 2024. Delft: Delft University of Technology, 2025.
 </div>
 
+<div class="pagebreak"></div>
+
 ## Introduction
 
 Over the past decades, large-scale digitization of historical sources by cultural heritage institutions such as archives, libraries and museums, together with international research consortia, have fundamentally changed the possibilities and playing field for humanities-based research. _Digital Humanities_ has become an institutionalized term, with the digital availability of source material guiding the way for posing new research questions in tandem with developing novel research methods. In the Digital Humanities, a focus on increased source availability and methodological innovation has fostered new conceptions of doing research: terms such as distant reading and viewing (Moretti 2013, Arnold & Tilton 2023), as well as thick or deep mapping (Presner, Shepard & Kawano 2014, Bodenhamer, Corrigan & Harris 2015) denote scholars’ engagement with big historical data (Graham et al. 2022), of which the scale, heterogeneity and previous incompatibility now call for computational approaches.
@@ -107,6 +109,8 @@ The ways in which AI, computer vision and machine learning principles help expan
 
 Increased digital availability and analysis of historical maps also introduces new opportunities to **integrate and collaborate** on holistic, multi-tool workflows and multi-source projects, in which the abovementioned interpretative trade-offs can be tackled in interdisciplinary teams. New, historically oriented research projects can be envisioned that bring all previously highlighted methodological and technical advancements into practice, around previously unexplored, inaccessible or incompatible archival sources. Three recent projects that illustrate this potential are the Dutch GLOBALISE and related Necessary Reunions project, the Belgian Artemis project and the French SoDUCo project.
 
+<div class="pagebreak"></div>
+
 ## Project Highlight I - [GLOBALISE](https://globalise.huygens.knaw.nl/) & [Necessary Reunions](https://necessaryreunions.org/)
 
 The GLOBALISE project aims to innovate research practices involving the archives of the Dutch East India Company (VOC), a dominant colonial power in the 17th and 18th centuries. The project’s primary goal is to create a new infrastructure that allows researchers to read, browse and query the millions of pages of written sources created by the VOC. These archives, housed in the Dutch National Archives, are crucial for new understandings of the histories of colonial expansion and local societies in maritime Asia and the Cape of Good Hope. However, all these written archival sources were originally intended to be used alongside visual materials, such as maps. Maps remain vital for understanding information about the places referenced in textual records, while these written sources, in turn, provide essential context that enriches cartographic knowledge (Van Wissen, Kuruppath & Petram 2025).
@@ -123,6 +127,8 @@ _Figure 6: Annotated map of the South Coast of India (ca. 1752-1757), showing an
 
 _Figure 7: Georeferenced map of the South Coast of India (ca. 1752-1757), showing a transformed early modern map with ten control points, annotated using Allmaps (from Dutch National Archives, [NL-HaNA_4.MIKO_W37](https://www.nationaalarchief.nl/en/research/archive/4.MIKO/invnr/W37/file/NL-HaNA_4.MIKO_W37))._
 
+<div class="pagebreak"></div>
+
 ## Project Highlight II - [Artemis](https://www.ghentcdh.ugent.be/projects/artemis-advanced-research-tools-environmental-studies-historical-maps-scheldt-valley)
 
 The Artemis project investigates how the Scheldt valley in Belgium, between Ghent and Antwerp, has changed over time. The river Scheldt has been shaped by centuries of human efforts to manage water and land. By studying historical maps, the project reveals how people used and engineered this dynamic environment throughout history, and how those past choices continue to shape the region today.
@@ -131,9 +137,11 @@ Run jointly by Ghent University and the University of Antwerp, and linked to the
 
 The project draws on key historical map series, including the Ferraris map, the primitive cadastre and the reduced cadastre (provided by the Royal Library of Belgium, the State Archives, the National Geographic Institute and Meise Botanical Garden), but also on unique handwritten older maps (as kept at the State Archives of Belgium and various city archives). Large-scale georeferencing is carried out via Allmaps and during public mapathons, while text extraction from the maps is performed using MapReader, with a fine-tuned text spotting model. For the historical cadastre, the project develops and tests feature extraction and parcel vectorization methods to identify and vectorize cadastral parcels on the primitive cadastral maps. The resulting datasets are being published as Linked Open Data, ensuring that other researchers and policymakers can reuse them to continue studying the Scheldt region’s environmental history and inform future land and water management.
 
-<div><img width="100%" src="/assets/paper/artemis-parcels.jpg"></div>
+<div class="pagebreak"><img width="100%" src="/assets/paper/artemis-parcels.jpg"></div>
 
 _Figure 8: Example of parcel numbers detected on the primitive cadastral maps from the Artemis project._
+
+<div class="pagebreak"></div>
 
 ## Project Highlight III - [SoDUCo](https://soduco.geohistoricaldata.org/)
 
@@ -142,6 +150,8 @@ The SoDUCo project has devised methods and models for examining how urban spatia
 By digitizing these rich resources through collaborative workflows, the project has introduced a qualitative leap for the historiography of Paris, namely to provide tools that allow researchers to trace, verify and refine information extracted from diverse historical materials. The project’s primary outcomes are an extensive open database on the social and urban history of Paris, and a collaborative geohistorical platform that enables users to further validate and enrich this database, as well as to let them explore and analyze socio-spatial evolution of the city.
 
 During the project, several city atlases were georeferenced using [Allmaps](https://soduco.geohistoricaldata.org/AllmapsAnnotations/). Although the initial georeferencing was manual, further research steps aimed to automate both the georeferencing of new maps and the realignment of previously georeferenced ones. The control points derived from georeferencing were also used to locate more precise data, such as building footprints, extracted from the maps during vectorization processes. The project’s work still continues on improving these extraction pipelines and making them applicable to other map series. Throughout the entire project, the research team aimed to keep a detailed provenance of the sources and tools used at each step, a practice they considered essential for the reliability and scientific usability of the collected data. The project sources and their provenance have therefore been documented in a searchable [catalog](https://catalog.geohistoricaldata.org/).
+
+<div class="pagebreak"></div>
 
 ## Conclusion
 
@@ -158,6 +168,8 @@ while **new research directions** for digitized historical cartographic material
 - new perspectives on well-known source material, through more extensive temporal or spatial scopes that now become more graspable for proper analysis;
 - a focus on (re)discovering cartographic patterns and trends over time, be it related to local geographic developments or more global cartographic evolutions;
 - and possibilities that extend beyond historical maps to other cartographic sources, such as aerial photography, satellite and drone imagery, and other material related to the fields of earth sciences, geodesy and engineering, to which Spatial Humanities and Spatial History can become more closely linked.
+
+<div class="pagebreak"></div>
 
 ## **References**
 
