@@ -29,7 +29,7 @@ _This working paper is an outcome of the first international Open Maps Meeting, 
 | Julien Perret         | Institut national de l'information géographique et forestière      |
 
 <div class="note card" label="Cite as:">
-Baptist, V., J. Schoonman, T. Vermaut, R. Stapel, M. Veldhuis, M. Meijers, K. McDonough, R. Wood, K. Westerling, L. van Wissen, M. Kuruppath, C. Verbruggen, I. Jongepier, V. Ducatteeuw, I. Di Lenardo, R. Petitpierre and J. Perret. “Open Maps: New Research Directions and Workflows for Digitized Historical Cartographic Material.” Open Maps Meeting, The Hague, The Netherlands, November 5-6, 2024. Delft: Delft University of Technology, 2025.
+Baptist, V., J. Schoonman, T. Vermaut, R. Stapel, M. Veldhuis, M. Meijers, K. McDonough, R. Wood, K. Westerling, L. van Wissen, M. Kuruppath, C. Verbruggen, I. Jongepier, V. Ducatteeuw, I. Di Lenardo, R. Petitpierre and J. Perret. “Open Maps: New Research Directions and Workflows for Digitized Historical Cartographic Material.” Open Maps Meeting, The Hague, The Netherlands, November 5-6, 2024. Delft: Delft University of Technology, 2025. <a href="https://doi.org/10.4233/uuid:3ee91c09-e616-4e23-bb85-be4d6738048b">https://doi.org/10.4233/uuid:3ee91c09-e616-4e23-bb85-be4d6738048b</a>
 </div>
 
 <div class="pagebreak"></div>
